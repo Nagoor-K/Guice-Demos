@@ -6,6 +6,7 @@ import java.lang.annotation.Target;
 import javax.inject.Qualifier;
 
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 
 @Qualifier
 @Target({ElementType.PARAMETER})
@@ -15,7 +16,7 @@ import com.google.inject.Inject;
 public class checkoutservices {
 	final Discounts discounts;
 @Inject
-  public checkoutservices(@Paypal Discounts discounts) {
+  public checkoutservices(@Named("gpay") Discounts discounts) {
     this.discounts = discounts;
   }
 	public int checkout(int totalamount) {
