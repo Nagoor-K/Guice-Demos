@@ -1,6 +1,6 @@
 
-public class normaldiscount implements Discounts {
+public class normaldiscount extends festivaldiscount {
 	public int getdiscount() {
-		return 50;
+		return 150;
 	}
 }
