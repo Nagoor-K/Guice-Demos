@@ -12,8 +12,8 @@ public class guicedemo {
 	  
 	  
 	  Injector injector=Guice.createInjector(new DemoModule());
-	  greeter g=injector.getInstance(greeter.class);
-	  g.say();
+	  greeter gre=injector.getInstance(greeter.class);
+	  gre.sayHello();
 	  
 
 //	  EntityManagerFactory emf=Persistence.createEntityManagerFactory("khan");

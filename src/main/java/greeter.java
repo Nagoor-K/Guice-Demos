@@ -21,7 +21,7 @@ public class greeter {
 		this.message=message;
 		this.count=count;
 	}
-	void say() {
+	void sayHello() {
 		for(int j=0;j<count;j++) {
 			System.out.println(message);
 		}
