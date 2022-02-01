@@ -9,7 +9,6 @@ public class demoguice {
 
 	  Injector injector=Guice.createInjector(new MyModule());
 	  checkoutservices cos=injector.getInstance(checkoutservices.class);
-	  int afterdiscont=cos.checkout(1000);
-	  System.out.println("After discount the total payable amount is : "+afterdiscont);
+	  cos.checkout();
   }
 }

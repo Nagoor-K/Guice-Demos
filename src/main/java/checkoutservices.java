@@ -8,19 +8,14 @@ import javax.inject.Qualifier;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-@Qualifier
-@Target({ElementType.PARAMETER})
-@Retention(RetentionPolicy.RUNTIME)
-@interface Paypal {}
-
 public class checkoutservices {
-	final Discounts discounts;
+	private String defaultdiscount;
 @Inject
-  public checkoutservices(@Named("gpay") Discounts discounts) {
-    this.discounts = discounts;
+  public checkoutservices(@Named("default discount")String defaultdiscount) {
+    this.defaultdiscount = defaultdiscount;
   }
-	public int checkout(int totalamount) {
+	public void checkout() {
 		
-		return totalamount-discounts.getdiscount();
+		System.out.println(defaultdiscount);
 	}
 }
