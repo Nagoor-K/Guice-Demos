@@ -1,7 +1,8 @@
+import javax.persistence.Entity;
+
 import com.google.inject.AbstractModule;
 import com.google.inject.Inject;
 import com.google.inject.Provides;
-
 class DemoModule extends AbstractModule{
 	@Provides
 	static Integer provideCount() {
