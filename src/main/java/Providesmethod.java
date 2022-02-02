@@ -11,6 +11,10 @@ public class Providesmethod {
 	  
 	  texteditor te=injector.getInstance(texteditor.class);
 	  te.makespellcheck();
+	 
+	  texteditor te1=injector.getInstance(texteditor.class);
+	  te1.makespellcheck();
 	  
+	   System.out.println(te==te1);
   }
 }
