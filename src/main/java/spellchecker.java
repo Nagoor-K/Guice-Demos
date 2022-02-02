@@ -9,18 +9,9 @@ public interface spellchecker {
 
 
 class spellcheckerimpl implements spellchecker{
-	private String dburl="My data base postgresql";
-	
-	public spellcheckerimpl() {}
-	
-	@Inject(optional = true)
-	public void setdburl(@Named("JDBC") String dburl) {
-		this.dburl=dburl;
-	}
-@Override
+	@Override @calltracker
   public void checkspelling() {
 		System.out.println("Inside spell checking");
-		System.out.println(dburl);
-	}
 	
+	}
 }
