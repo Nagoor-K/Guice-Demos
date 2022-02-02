@@ -9,11 +9,14 @@ public interface spellchecker {
 
 
 class spellcheckerimpl implements spellchecker{
-	@Inject @Named("JDBC")
-	private String dburl;
+	private String dburl="My data base postgresql";
 	
 	public spellcheckerimpl() {}
 	
+	@Inject(optional = true)
+	public void setdburl(@Named("JDBC") String dburl) {
+		this.dburl=dburl;
+	}
 @Override
   public void checkspelling() {
 		System.out.println("Inside spell checking");
