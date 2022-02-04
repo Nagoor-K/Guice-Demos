@@ -1,2 +1,10 @@
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
-public class persistenceModule {}
+import com.google.inject.AbstractModule;
+
+public class persistenceModule extends AbstractModule{
+	public void configure() {
+		bind(EntityManagerFactory.class).toInstance(Persistence.createEntityManagerFactory("Eclipselink_JPA"));
+		}
+}
